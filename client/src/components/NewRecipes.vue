@@ -87,11 +87,7 @@ export default {
       }
     },
     removeIngredients (value) {
-      if (this.ingredients.length === 1) {
-        this.ingredients.pop(1)
-      } else {
-        this.ingredients.filter(item => item !== value ? console.log(this.ingredients) : console.log(item, value))
-      }
+      this.ingredients = this.ingredients.filter(item => item !== value)
     },
     async addRecipe () {
       try {
